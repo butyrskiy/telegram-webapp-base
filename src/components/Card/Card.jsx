@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import styles from "./Card.module.css";
 
 const Card = ({ food, onAdd, onRemove }) => {
-  const { title, price, image, id } = food;
+  const { title, price, image } = food;
   const [count, setCount] = useState(0);
 
   const handleIncrement = () => {

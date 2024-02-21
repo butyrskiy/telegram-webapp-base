@@ -1,7 +1,7 @@
 import Button from "../Button/Button";
 import styles from "./Cart.module.css";
 
-const Cart = ({ cartItems, onAdd, onRemove }) => {
+const Cart = ({ cartItems, onCheckout }) => {
   const totalPrice = cartItems.reduce((a, c) => a + c.price * c.quantity, 0);
 
   return (
@@ -12,6 +12,7 @@ const Cart = ({ cartItems, onAdd, onRemove }) => {
         title={cartItems.length === 0 ? "Order" : "Checkout"}
         type="checkout"
         disable={cartItems.length === 0 ? true : false}
+        onClick={onCheckout}
       />
     </div>
   );
